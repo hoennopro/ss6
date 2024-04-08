@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function removeDuplicates(inputString) {
+  
+    let uniqueChars = new Set();
+    
+  
+    let result = "";
+
+   
+    for (let char of inputString) {
+        
+        if (!uniqueChars.has(char)) {
+            uniqueChars.add(char);
+            result += char;
+        }
+    }
+
+    return result;
+}
+
+
+console.log(removeDuplicates("banana")); 
+console.log(removeDuplicates("hello world")); 
+    </script>
+</body>
+</html>

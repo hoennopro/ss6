@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       
+let firstName = "hoen";
+let lastName = "bunn";
+
+
+function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+
+if (firstName.charAt(0) !== firstName.charAt(0).toUpperCase()) {
+    firstName = capitalizeFirstLetter(firstName);
+}
+
+if (lastName.charAt(0) !== lastName.charAt(0).toUpperCase()) {
+    lastName = capitalizeFirstLetter(lastName);
+}
+
+
+let fullName = firstName + " " + lastName;
+
+console.log("Full Name:", fullName);
+
+    </script>
+</body>
+</html>

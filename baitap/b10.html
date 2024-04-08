@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+function isNumeric(value) {
+    return !isNaN(parseFloat(value)) && isFinite(value);
+}
+
+
+function add(a, b) {
+    if (typeof a === 'string' && isNumeric(a)) {
+        a = parseFloat(a);
+    }
+
+    if (typeof b === 'string' && isNumeric(b)) {
+        b = parseFloat(b);
+    }
+
+    if (typeof a === 'number' && typeof b === 'number') {
+        return a + b;
+    } else {
+        return "Không hợp lệ";
+    }
+}
+
+
+function subtract(a, b) {
+    if (typeof a === 'string' && isNumeric(a)) {
+        a = parseFloat(a);
+    }
+
+    if (typeof b === 'string' && isNumeric(b)) {
+        b = parseFloat(b);
+    }
+
+    if (typeof a === 'number' && typeof b === 'number') {
+        return a - b;
+    } else {
+        return "Không hợp lệ";
+    }
+}
+
+
+function multiply(a, b) {
+    if (typeof a === 'string' && isNumeric(a)) {
+        a = parseFloat(a);
+    }
+
+    if (typeof b === 'string' && isNumeric(b)) {
+        b = parseFloat(b);
+    }
+
+    if (typeof a === 'number' && typeof b === 'number') {
+        return a * b;
+    } else {
+        return "Không hợp lệ";
+    }
+}
+
+
+function divide(a, b) {
+    if (typeof a === 'string' && isNumeric(a)) {
+        a = parseFloat(a);
+    }
+
+    if (typeof b === 'string' && isNumeric(b)) {
+        b = parseFloat(b);
+    }
+
+    if (typeof a === 'number' && typeof b === 'number') {
+        if (b !== 0) {
+            return a / b;
+        } else {
+            return "Không hợp lệ: Chia cho 0";
+        }
+    } else {
+        return "Không hợp lệ";
+    }
+}
+
+console.log("Phép cộng:", add(5, 10)); 
+console.log("Phép trừ:", subtract("15", 8)); 
+console.log("Phép nhân:", multiply("3", "4")); 
+console.log("Phép chia:", divide(10, "2")); 
+console.log("Phép chia cho 0:", divide(10, "0")); 
+console.log("Tham số không hợp lệ:", add("abc", "def")); 
+
+    </script>
+</body>
+</html>
